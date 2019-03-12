@@ -1,0 +1,52 @@
+{
+  "name": "hsm-admin-panel",
+  "private": true,
+  "description": "",
+  "main": "src/app.js",
+  "scripts": {
+    "lint": "eslint --fix .",
+    "start": "webpack-dev-server --compress --progress --colors --host localhost --port 4200 --history-api-fallback --content-base cdn-root",
+    "clean": "rimraf dist",
+    "prebuild": "npm run clean",
+    "build": "NODE_ENV=production webpack --mode=production --colors --bail",
+    "postbuild": "cp cdn-root/* dist",
+    "test": "jest",
+    "test:coverage": "jest --coverage"
+  },
+  "author": "Ronald Chen",
+  "license": "ISC",
+  "dependencies": {
+    "pixi.js": "5.0.0-rc.2"
+  },
+  "devDependencies": {
+    "@babel/core": "7.2.2",
+    "@babel/preset-env": "7.3.1",
+    "babel-eslint": "10.0.1",
+    "babel-jest": "24.1.0",
+    "babel-loader": "8.0.5",
+    "coding-convention": "github:Battlefy/coding-convention#4",
+    "ejs-compiled-loader": "1.1.0",
+    "eslint": "5.12.0",
+    "html-webpack-plugin": "3.2.0",
+    "jest": "24.1.0",
+    "rimraf": "2.6.3",
+    "webpack": "4.29.1",
+    "webpack-cli": "3.2.3",
+    "webpack-dev-server": "3.1.14"
+  },
+  "jest": {
+    "resetMocks": true,
+    "resetModules": true,
+    "restoreMocks": true,
+    "collectCoverageFrom": [
+      "**/*.js"
+    ],
+    "coveragePathIgnorePatterns": [
+      "babel.config.js",
+      "webpack.config.js",
+      "coverage/",
+      ".storybook/",
+      ".stories.js"
+    ]
+  }
+}
