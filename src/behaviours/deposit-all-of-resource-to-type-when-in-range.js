@@ -1,6 +1,6 @@
 import distance from "../vectors/distance";
 
-export default function depositAllOfResourceToTypeWhenInRange({resource, type, range = 20} = {}) {
+export default function depositAllOfResourceToTypeWhenInRange({resource, type, range = 20}) {
   return (entity, _, world) => {
 
     const entitiesOfType = world.entities.filter((e) => e.type === type);

@@ -1,6 +1,6 @@
 import distance from "../vectors/distance";
 
-export default function harvestResourceFromTypeWhenInRange({resource, type, amount = 1, range = 20, period = 5} = {}) {
+export default function harvestResourceFromTypeWhenInRange({resource, type, amount = 1, range = 20, period = 5}) {
   return (entity, input, world) => {
     if (!entity.inventory.hasOwnProperty(resource)) {
       entity.inventory[resource] = 0;

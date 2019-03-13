@@ -8,7 +8,7 @@ const defaultStates = {
 }
 
 
-export default function Entity({x = 0, y = 0, states = {}, state = 'default'} = {}) {
+export default function Entity({x, y, states = {}, state = 'default'}) {
   const builtStates = {
     ...defaultStates,
     ...states
