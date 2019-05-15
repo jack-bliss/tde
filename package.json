@@ -16,7 +16,9 @@
   "author": "Ronald Chen",
   "license": "ISC",
   "dependencies": {
-    "pixi.js": "5.0.0-rc.2"
+    "pixi.js": "5.0.0-rc.2",
+    "react": "16.8.4",
+    "react-dom": "16.8.4"
   },
   "devDependencies": {
     "@babel/core": "7.2.2",

@@ -20,6 +20,6 @@ export default function Cretin({x, y, behaviours = []}) {
       }
     }),
     type: 'cretin',
-    speed: 120
+    speed: 6
   }
 }

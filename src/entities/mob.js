@@ -4,7 +4,7 @@ export default function Mob({x, y, states = {}, state = 'default'}) {
   return {
     ...Entity({x, y, states, state}),
     type: 'mob',
-    speed: 100,
+    speed: 5,
     harvest: {},
     direction: {
       x: 0,

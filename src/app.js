@@ -10,7 +10,11 @@ let now = Date.now();
 
 const input = {
   dt: 0,
-  mouse: {x: null, y: null, down: false},
+  mouse: {
+    x: null, 
+    y: null, 
+    down: false
+  },
   keyRising: {},
   keyDown: {}
 }
@@ -27,8 +31,8 @@ document.body.addEventListener('keyup', (e) => {
 })
 
 document.body.addEventListener('mousemove', (e) => {
-  input.mouse.x = e.clientX;
-  input.mouse.y = e.clientY;
+  input.mouse.x = e.clientX / 10;
+  input.mouse.y = e.clientY / 10;
 })
 
 document.body.addEventListener('mousedown', (e) => {

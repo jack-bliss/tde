@@ -14,24 +14,12 @@ export default function Drone({x, y, selectorKey}) {
       states: {
         manual: {
           actions: {
-            deselected: 'roam'
           },
           behaviours: [
             updatePositionWithVelocity(),
             updateVelocityTowardsTargetPosition(),
             toggleSelectedOnKeyPress(selectorKey),
             setTargetPositionWithMouseWhenSelected()
-          ]
-        },
-        roam: {
-          actions: {
-            selected: 'manual'
-          },
-          behaviours: [
-            updatePositionWithVelocity(),
-            updateVelocityTowardsTargetPosition(),
-            toggleSelectedOnKeyPress(selectorKey),
-            setTargetPositionRandomly()
           ]
         }
       }
